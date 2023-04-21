@@ -1,24 +1,94 @@
-Case Number'
-'Date'
-'Year'
-'Type'
-'Country'
-'Area'
-'Location'
-'Activity'
-'Name'
-'Sex '
-'Age'
-'Injury'
-'Fatal (Y/N)'
-'Time'
-'Species '
-'Investigator or Source'
-'pdf'
-'href formula'
-'href'
-'Case Number.1'
-'Case Number.2'
-'original order'
-'Unnamed: 22'
-'Unnamed: 23'
+Filas : 25.723
+Columnas: 24
+
+NOTAS:
+Todas las columnas tienen valores duplicados
+
+Descripcion columnas: dtypes: float64(2), object(22)
+
+Case Number               17021
+Cambiarlo todo al mismo tipo. YYYY-MM-DD // Algunos tienen 2018.06.03.a
+Se podria poner esta como indice y resetear el indice?
+
+Date                      19421
+Parece que esta bien, pero mirar mas a fono y cambiarle a tipo fecha.
+
+Year                      19423
+Ponerle tipo fecha o integer // Casi todas las columnas estan mal '2018.0'
+
+Type                      19425
+Country                   19471
+Tiene paises repetidos pero algunos en mayusculas y otros en minuscula
+
+Area                      19876
+Muchos nulos. Como matcheas con los paises?
+Habra que ver cuales son los nulos e intentarlo rellenar con los datos de las demas.
+
+Location                  19961
+Lo mas logico es poner unknown o no info en los nulos de esta columna.
+
+Activity                  19965
+Lo mas logico es poner unknown o no info en los nulos de esta columna.
+
+Name                      19631
+Estos datos nos da igual. No son necesarios // Mirar al final que hacer con ella
+
+Sex                       19986
+Quitar el espacio despues de Sex al nombre
+Solo puede tener dos valores,F o M // Se podran machear algunos con los nombres, pero uno a uno va a ser complicado
+
+
+Age                       22252
+Tiene que ser un integer, ahora esta como object.
+Lo mas logico es poner unknown o no info en los nulos de esta columna.
+
+Injury                    19449
+poner unknown o no info en los nulos de esta columna.
+Convertirlo todo en minusculas.
+
+Fatal (Y/N)               19960
+Cambiar el nombre de la columna a solo Fatal.
+Datos muy distintos, solo puede tener N e Y
+Cambiar los nulos por unknown.
+Todo lo que empiece por n cambiarlo por N como si fuera no
+
+Time                      22775
+Lo ideal seria que quedara. Morning, afternoon y night.
+Todo lo que empiece por = 07,08,09,10,11,12 sera morning
+Todo lo que empiece por = 13,14,15,16,17,18,19,20,21 sera af
+
+
+Species                   22259
+Quitarle el espacio al nombre lo despues de Species
+Son strings con muchisima mierda.
+Todo lo que tenga white cambiarlo por white shark
+Mirar mas adelante
+Rellenar con unknown los nulos
+
+Investigator or Source    19438
+Rellenar con unknown los nulos
+
+pdf                       19421
+Solo sustituir los nulos
+
+href formula              19422
+Columna repetida con href
+Solo sustituir los nulos
+
+href                      19421
+Borrar los datos y usarla para otra cosa.
+
+Case Number.1             19421
+Solo rellenar los vacios. Mirar si puedo unificar formato
+
+Case Number.2             19421
+Solo rellenar los vacios. Mirar si puedo unificar formato
+
+original order            19414
+Son numeros por orden, rellenarlo siguiendoun listado.
+
+Unnamed: 22               25722
+Las columna no vale para nada
+Unnamed: 23               25721
+Las columna no vale para nada
+
