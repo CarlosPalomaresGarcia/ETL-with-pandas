@@ -1,0 +1,18 @@
+Revisar
+Eliminacion de filas que tengan 1/3 de valores nulos. Si tienen menos de 8 datos, la eliminamos.
+Cambio de nombre de columnas, por los valores correctos.
+
+Como la columna 'Year' es de tipo float, quiero que los nulos me los cambie por 0. Para que no me cambie el tipo en la columna.
+Relleno todos los nulos con'Noinfo'
+La columna 'Country'e 'Injury' cambio todos los textos a minuscula con la primera letra en mayuscula
+Cambiar de tipo float a tipo integer las fechas. Para hacer desaparecer el .0 despues de la fecha
+
+
+
+Recorrer cada fila del DataFrame y agregar el número consecutivo correspondiente y cambiar los numeros de mayor a menos, ya que el ataque mas nuevo es el numero mas grande.
+
+COSAS PENDIENTES
+
+
+COSAS QUE NO HE PODIDO HACER
+Rellenar la columna Year con los cuatro numeros de la columna Case_number
